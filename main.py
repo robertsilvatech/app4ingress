@@ -34,6 +34,8 @@ async def name(name, request: Request):
     result['name'] = name
     return result
 
+@app.get("/api/users")
+@app.get("/api/v1/users")
 @app.get("/users")
 async def user(request: Request, status: str | None = None):
     result = {}
